@@ -9,7 +9,7 @@ const routes: Routes = [
   {path: '', pathMatch: 'full', redirectTo: 'add-employee'},
   {path: 'add-employee', component: AddEmployeeComponent},
   {path:'read-employees', component: ReadEmployeesComponent},
-  {path: 'update-employee', component: UpdateEmployeeComponent}
+  {path: 'update-employee/:id', component: UpdateEmployeeComponent}
 ];
 
 @NgModule({
