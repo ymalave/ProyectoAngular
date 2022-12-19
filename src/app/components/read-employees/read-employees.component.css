@@ -1,0 +1,24 @@
+*{
+    font-size: 1.1em;
+    text-align: center;
+}
+
+.card{
+    margin: 0 50px;
+}
+
+.cart .card-header{
+    font-size: 2em;
+}
+
+.card .card-body{
+    margin: 0 50px;
+}
+
+.table-primary thead tr th{
+    background-color: #f5f5f5;
+}
+
+.table-primary tbody tr td{
+    background-color: #ffffff;
+}
