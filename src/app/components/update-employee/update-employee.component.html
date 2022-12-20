@@ -3,26 +3,26 @@
         Editar Empleado
     </div>
     <div class="card-body">
-        <form>
+        <form [formGroup]="employeeForm" (ngSubmit)="sendInfo()">
             <div class="mb-3">
               <label for="" class="form-label">Cedula de identidad</label>
-              <input type="text"
+              <input formControlName="Dni" type="text"
                 class="form-control" name="" id="" aria-describedby="helpId" placeholder="Escriba su cedula">
             </div>
             <div class="mb-3">
               <label for="" class="form-label">Nombre</label>
-              <input type="text"
+              <input formControlName="name" type="text"
                 class="form-control" name="" id="" aria-describedby="helpId" placeholder="Escriba Nombre">
             </div>
 
             <div class="mb-3">
               <label for="" class="form-label">Correo Electrónico</label>
-              <input type="email"
+              <input formControlName="email" type="email"
                 class="form-control" name="" id="" aria-describedby="helpId" placeholder="Escriba su correo">
             </div>
 
             <div class="btn-group" role="group" aria-label="Agregar empleado">
-                <button type="button" class="btn btn-success">Editar</button>
+                <button type="submit" class="btn btn-success">Modificar</button>
                 <button type="button" class="btn btn-primary">Cancelar </button>
             </div>
         </form>

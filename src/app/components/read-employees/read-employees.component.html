@@ -14,17 +14,14 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr class="">
-                        <td scope="row">30110267</td>
-                        <td>Yoberth José Malavé Aliendres</td>
-                        <td>ymalave@seguroscaroni.com</td>
-                        <td><a routerLink="/update-employee/1">Editar</a> | Borrar</td>
-                    </tr>
-                    <tr class="">
-                        <td scope="row">28255497</td>
-                        <td>Mariela Jennifer</td>
-                        <td>mcampbell@seguroscaroni.com</td>
-                        <td><a routerLink="/update-employee/1">Editar</a> | Borrar</td>
+                    <tr *ngFor="let employee of Employee; let iControl=index">
+                        <td scope="row">{{employee.id}}</td>
+                        <td>{{employee.nombre}}</td>
+                        <td>{{employee.correo}}</td>
+                        <td><div class="btn-group">
+                            <a class="btn btn-success" routerLink="/update-employee/{{employee.id}}" role="button">Editar</a>
+                            <a class="btn btn-danger" (click)="DeleteEmployee(employee.id, iControl)" role="button">Borrar</a>
+                        </div></td>
                     </tr>
                 </tbody>
             </table>
