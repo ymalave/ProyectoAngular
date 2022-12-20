@@ -4,9 +4,11 @@
 }
 
 .card{
-    margin: 0 35%;
+    margin: auto;
+    width: 25rem;
 }
 
 form{
     padding: 0 10px;
+    margin-left: 0;
 }
