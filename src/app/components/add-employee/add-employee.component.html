@@ -3,16 +3,16 @@
         Agregar Empleado
     </div>
     <div class="card-body">
-        <form>
+        <form [formGroup]="employeeForm" (ngSubmit)="sendInfo()">
             <div class="mb-3">
               <label for="" class="form-label">Cedula de identidad</label>
               <input type="text"
-                class="form-control" name="" id="" aria-describedby="helpId" placeholder="Escriba su cedula">
+                class="form-control" formControlName="name" id="" aria-describedby="helpId" placeholder="Escriba su cedula">
             </div>
             <div class="mb-3">
               <label for="" class="form-label">Nombre</label>
               <input type="text"
-                class="form-control" name="" id="" aria-describedby="helpId" placeholder="Escriba Nombre">
+                class="form-control" formControlName="email" id="" aria-describedby="helpId" placeholder="Escriba Nombre">
             </div>
 
             <div class="mb-3">
@@ -22,7 +22,7 @@
             </div>
 
             <div class="btn-group" role="group" aria-label="Agregar empleado">
-                <button type="button" class="btn btn-success">Agregar</button>
+                <button type="submit" class="btn btn-success">Agregar</button>
                 <button type="button" class="btn btn-primary">Cancelar </button>
             </div>
         </form>
